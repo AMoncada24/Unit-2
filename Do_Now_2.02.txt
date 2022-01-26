@@ -1,0 +1,41 @@
+############################
+Do Now 2.02
+############################
+----------------------------
+Part 1
+----------------------------
+Open up the console. Type each line of the following code into the interactive editor:
+ >>> 5 < 3
+ >>> 5 > 3
+ >>> type(5 < 3)
+ >>> type(5 > 3)
+ >>> my_favorite_animal = "cats"
+ >>> user_favorite_animal = input("What is your favorite animal? ")
+ >>> my_favorite_animal == user_favorite_animal
+In your notebook, answer the following
+What does 5 < 3 evaluate to? False.  
+What is the type of 5 < 3? What does that stand for (should be familiar from Snap!)? Bool, aka, Boolean Values, or True or False.
+What is the difference between == and = ? "=" sets what something is equivalent to, "==" checks whether or not that is true.
+What data type do you think my_favorite_animal == user_favorite_animal is? Bool/True or False.
+----------------------------
+Part 2
+----------------------------
+Open up the console. Type the following code into the interactive editor.
+ >>> months_with_driving_permit = 6
+ >>> age = 16
+ >>> can_get_license = months_with_driving_permit >= 6 and age >= 16
+ >>> print(can_get_license)
+In your Notebook, add this to your notes in your notebook
+What does 'and' do here? What type do you think can_get_license is? 'and' works to incorporate 2 different values into one. 'can_get_license' is Bool.
+Update the code to fit the new driving law: If you are over the age of 18 you don't need to have a permit
+----------------------------
+Part 3
+----------------------------
+Open up the console. Type the following code into the interactive editor.
+>>> animal = 'mouse'
+>>> animal == 'cat' or 'dog'
+>>> animal = 'mouse'
+>>> animal == 'cat' or animal == 'dog'
+In your notebook, continue answers to the following
+What does = and == do here? '=' sets the equivalent, '==' checks the validity.
+What is the difference between the two 'or' statements? The first only checks if 'cat' is equivalent to 'animal', whereas the second checked to see if either was equivalent to 'animal'.
