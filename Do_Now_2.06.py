@@ -18,7 +18,7 @@ while True:
 3. In your Notebook
 -------------------
 Write responses for the following:
-    1.  What happens when you run this code?
+    1.  What happens when you run this code? It prints "a" indefinitely.
 
 Try using other Boolean expressions instead of True (e.g. 4 > 5 and 9 != 2), and explore what happens.
 
@@ -53,5 +53,3 @@ while True:
         else:
             print(f"{animal}, a fine pet!")
 '''
-
-    
