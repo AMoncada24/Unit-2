@@ -19,8 +19,8 @@ else:
     else:
         print("[you were thrown over bridge]")
 
-Prediction:
-Actual:
+Prediction: It will function as written.
+Actual: It simply skipps directly to the first print command no matter the input.
 
 ---------------------------------------
 Example 2
@@ -45,8 +45,8 @@ elif user_input == "pink":
 else:
     print("I don't recognize that color. Is it even...??")
 
-Prediction:
-Actual:
+Prediction: It will function as intended.
+Actual: It does work.
 
 ---------------------------------------
 In your Notebook
@@ -63,3 +63,36 @@ User picks a number
 The prize corresponding with that door is printed for the user.
 Write code below the multiline comment
 '''
+prize1 = "$1"
+prize2 = "$2"
+prize3 = "$3"
+prize4 = "$4"
+prize5 = "$5"
+prize6 = "$6"
+prize7 = "$7"
+prize8 = "$8"
+prize9 = "$9"
+prize10 = "$10"
+user_input = input("What door do you pick? (1-10) ")
+if user_input == '1':
+    print({prize1})
+elif user_input == "2":
+    print({prize2})
+elif user_input == "3":
+    print({prize3})
+elif user_input == "4":
+    print({prize4})
+elif user_input == "5":
+    print({prize5})
+elif user_input == "6":
+    print({prize6})
+elif user_input == "7":
+    print({prize7})
+elif user_input == "8":
+    print({prize8})
+elif user_input == "9":
+    print({prize9})
+elif user_input == "10":
+    print({prize10})
+else:
+    print("That isn't an option.")
