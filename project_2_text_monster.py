@@ -1,37 +1,86 @@
-name = input("What is your name? ")
-number1 = int(input("Enter your age. "))
-val1 = int(input("How many times would you like the message to print? "))
-number2 = 100
-fix = -1
-result = number1-number2
-trueresult = result*fix
-year = 2022
-year100 = year+trueresult
-text = f'You, {name}, will turn 100 in {year100}. \n' * val1
-print(text)
+print("Welcome to Text Monster!" )
 
-floor_1 = ['nothing', 'nothing', 'stairs up']
-floor_2 = ['nothing', 'nothing', 'stairs up']
-floor_3 = ['prize', 'nothing', 'nothing']
+floor_1 = ['monster', 'sword', 'upstairs', 'sword', 'nothing']
+floor_2 = ['sword', 'magic stone', 'sword', 'upstairs', 'monster']
+floor_3 = ['prize', 'boss monster', 'sword', 'monster', 'downstairs']
 
-user_room = 0
+user_room = 4
 user_floor = floor_1
+game_over = False 
+items = [] 
+command = ""
 
-if user_input == "down":
-current_room = user_floor[user_room]
-if current_room != "stairs down":
-print("Can't go downstairs; there are no stairs.")
+while (game_over==False): 
 
-if dead = True:
-    print("You died.")
-else
-    print("Congratulations! You got the prize!")
+  user_input = input(" what would you like to do? (left/right/up/down/grab/fight) ")
+   
+  if user_input == "left":
+    if user_room == 0:
+      print("There are no more rooms to go to.")
+    elif user_floor[user_room] == "monster" and command == "left" :
+      print("You lost!")
+      game_over = True
+    else:
+      user_room = user_room - 1
+      
+  elif user_input == "right":
+    if user_room == 4:
+      print("There are no more rooms to go to.")
+    elif user_floor[user_room] == "monster" and command == "right" :
+      print("You lost!")
+      game_over = True 
+    else:
+      user_room = user_room + 1 
 
-user_input = input("Would you like to play again? (y/n)")
-    if user_input == y :
-        dead = False
-    if user_input == n :
-        print("Goodbye!")
-            break
-    else
-        print("That is not a valid input.")
+  elif user_input == "up":
+    if user_floor[user_room] == "upstairs":
+      if user_floor == floor_1:
+        user_floor = floor_2
+      else:
+        user_floor = floor_3 
+    else:
+      print("There is no staircase here.")
+        
+  elif user_input == "down":
+    if user_floor[user_room] == "downstairs":
+      if user_floor == floor_3:
+        user_floor = floor_2
+      else: 
+        user_floor = floor_1
+    else:
+      print("There is no staircase here.")
+  
+  elif user_input == "grab":
+    if len(items) < 3:
+      if user_floor[user_room] == "sword" or user_floor[user_room] == "magic stone":
+        items.append(user_floor[user_room])
+        user_floor[user_room] = "nothing"
+      elif user_floor[user_room] == "prize":
+        print("You won! Congratulations!")
+        game_over = True
+        break
+      else:
+        print("You can't grab right now.")
+    else:
+      print("You can't grab anything else!")
+  
+  elif user_input == "fight":
+    if user_floor[user_room] == "monster":
+      if "sword" in items:
+        user_floor[user_room] = "nothing"
+        items.remove("sword")
+      else: 
+        print("You lost!")
+        game_over = True 
+    if user_floor[user_room] == "boss monster":
+      if "sword" in items and "magic stone" in items:
+        user_floor[user_room] = "nothing"
+        items.remove("sword")
+        items.remove("magic stone")
+      else: 
+        print("you lost")
+        game_over = True 
+         
+  print ("This room has: " + user_floor[user_room])
+  
+  command = user_input

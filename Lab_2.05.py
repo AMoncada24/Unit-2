@@ -10,8 +10,8 @@ a = ['a', 'b', 'c', 'd', 'e']
 print(a[0:3])
 print(a[1:4])
 
-Prediction:
-Actual:
+Prediction: Will work as intended and print correct items.
+Actual: Works as intended.
 
 Example 2
 ---------
@@ -19,7 +19,7 @@ a = ['a', 'b', 'c', 'd', 'e']
 print(a[1:len(a) - 3])
 
 Prediction:
-Actual:
+Actual: Prints 'b'
 
 Example 3
 ---------
@@ -28,8 +28,8 @@ b = a.remove('b')
 print(a)
 print(b)
 
-Prediction:
-Actual:
+Prediction: Will function properly.
+Actual: ^
 
 Example 4
 ---------
